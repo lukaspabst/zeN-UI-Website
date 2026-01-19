@@ -1,0 +1,83 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--zen-bg-0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--zen-bg-3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--zen-primary);
+}
+
+zen-theme-toggle {
+    position: relative !important;
+    display: inline-flex;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+}
+
+.gallery-card .card-content {
+    overflow: visible;
+}
+
+.demo-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--zen-radius-md, 8px);
+    background: var(--zen-primary);
+    color: #000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.demo-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.demo-btn-outline {
+    background: transparent;
+    border: 1px solid var(--zen-primary);
+    color: var(--zen-primary);
+}
+
+.demo-btn-outline:hover {
+    background: var(--zen-primary);
+    color: #000;
+}
+
+.zen-tooltip-portal {
+    z-index: 10000 !important;
+}
+
+.zen-tooltip-portal.visible {
+    opacity: 1 !important;
+    transform: translate(var(--x, 0), var(--y, 0)) scale(1) !important;
+}
