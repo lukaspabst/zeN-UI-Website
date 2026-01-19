@@ -1,5 +1,5 @@
 :root {
-    /* Primary color defaults (purple) - using HSL for theme switching */
+
     --zen-primary-h: 250;
     --zen-primary-s: 95%;
     --zen-primary-l: 64%;
@@ -7,24 +7,24 @@
     --zen-primary-light: hsl(calc(var(--zen-primary-h) + 30), var(--zen-primary-s), calc(var(--zen-primary-l) + 10%));
     --zen-primary-glow: hsla(var(--zen-primary-h), var(--zen-primary-s), var(--zen-primary-l), 0.5);
 
-    /* Backgrounds */
+
     --zen-bg-0: #030304;
     --zen-bg-1: #0f0f11;
     --zen-bg-2: #18181b;
     --zen-bg-3: #27272a;
 
-    /* Text */
+
     --zen-text-1: #ffffff;
     --zen-text-2: #a1a1aa;
     --zen-text-3: #52525b;
 
-    /* Glass */
+
     --zen-glass-bg: rgba(255, 255, 255, 0.03);
     --zen-glass-bg-hover: rgba(255, 255, 255, 0.08);
     --zen-glass-border: rgba(255, 255, 255, 0.08);
     --zen-glass-border-hover: rgba(255, 255, 255, 0.15);
 
-    /* Radii */
+
     --zen-radius-xs: 8px;
     --zen-radius-sm: 12px;
     --zen-radius-md: 16px;
@@ -32,59 +32,55 @@
     --zen-radius-xl: 32px;
     --zen-radius-full: 9999px;
 
-    /* Font */
+
     --zen-font-family: 'Outfit', system-ui, -apple-system, sans-serif;
     --font-sans: var(--zen-font-family);
 
-    /* Shadows */
+
     --zen-shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.4);
     --zen-shadow-md: 0 8px 24px -6px rgba(0, 0, 0, 0.5);
     --zen-shadow-lg: 0 16px 48px -12px rgba(0, 0, 0, 0.6);
     --zen-shadow-glow: 0 0 20px hsla(var(--zen-primary-h), var(--zen-primary-s), var(--zen-primary-l), 0.3);
 }
 
-/* ============================================
-   Theme Color Overrides
-   ============================================ */
 
-/* Ocean Blue */
+
+
 :root.theme-ocean {
     --zen-primary-h: 210;
     --zen-primary-s: 100%;
     --zen-primary-l: 56%;
 }
 
-/* Forest Green */
+
 :root.theme-forest {
     --zen-primary-h: 150;
     --zen-primary-s: 60%;
     --zen-primary-l: 45%;
 }
 
-/* Sunset Orange */
+
 :root.theme-sunset {
     --zen-primary-h: 30;
     --zen-primary-s: 100%;
     --zen-primary-l: 56%;
 }
 
-/* Rose Pink */
+
 :root.theme-rose {
     --zen-primary-h: 330;
     --zen-primary-s: 85%;
     --zen-primary-l: 60%;
 }
 
-/* Amber Gold */
+
 :root.theme-amber {
     --zen-primary-h: 45;
     --zen-primary-s: 95%;
     --zen-primary-l: 50%;
 }
 
-/* ============================================
-   Light Mode
-   ============================================ */
+
 :root.light {
     --zen-bg-0: #ffffff;
     --zen-bg-1: #fafafa;

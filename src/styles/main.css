@@ -41,7 +41,6 @@ zen-theme-toggle {
     top: auto !important;
 }
 
-/* Footer Enhancements */
 .footer-content {
     display: flex;
     flex-direction: column;
@@ -93,7 +92,6 @@ zen-theme-toggle {
     margin-right: auto;
 }
 
-/* Footer Link (Restored Pill Style) */
 .zen-disclaimer-link {
     display: inline-flex;
     align-items: center;
