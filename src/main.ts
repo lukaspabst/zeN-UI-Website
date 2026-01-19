@@ -72,7 +72,7 @@ categories.forEach(cat => {
 mountPoint.innerHTML = `
   <section class="hero">
     <div class="hero-particles">
-      <zen-partic count="160" speed="0.5" maxSize="3" connected></zen-particles>
+      <zen-particles count="160" speed="0.5" maxSize="3" connected></zen-particles>
     </div>
     <div class="hero-glow hero-glow-1"></div>
     <div class="hero-glow hero-glow-2"></div>
@@ -201,7 +201,22 @@ mountPoint.innerHTML = `
   <footer class="site-footer">
     <div class="footer-content">
       <span style="font-size:2rem; font-weight:700; background:linear-gradient(135deg, var(--zen-primary), hsl(calc(var(--zen-primary-h) + 30), var(--zen-primary-s), calc(var(--zen-primary-l) + 10%))); -webkit-background-clip:text; -webkit-text-fill-color:transparent; filter:drop-shadow(0 0 20px var(--zen-primary));">zeN UI</span>
-      <p>Built with ❤️ by Lukas Pabst</p>
+      <p class="footer-credit">Built with ❤️ by Lukas Pabst</p>
+      
+      <div class="footer-disclaimer">
+        <div class="disclaimer-content">
+          <h4>Full Component Library</h4>
+          <p>This gallery showcases a curated selection of components. For complete documentation, API references, and to explore all 50+ components, visit our comprehensive Storybook.</p>
+          <a href="#" target="_blank" class="zen-disclaimer-link">
+            Open Storybook Dictionary
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 `;
