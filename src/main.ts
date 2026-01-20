@@ -310,16 +310,29 @@ setTimeout(() => {
     const prevBtn = document.querySelector(`.prev-btn[data-category="${cat}"]`) as HTMLButtonElement;
     const nextBtn = document.querySelector(`.next-btn[data-category="${cat}"]`) as HTMLButtonElement;
     let currentIndex = 0;
-    const cardWidth = 400;
-    const gap = 24;
-    const trackPadding = 120;
     let maxIndex = 0;
 
+    const getCardDimensions = () => {
+      const isMobile = window.innerWidth <= 768;
+      const firstCard = track.querySelector('.gallery-card') as HTMLElement;
+      const cardWidth = firstCard ? firstCard.offsetWidth : (isMobile ? 300 : 400);
+      const gap = isMobile ? 16 : 24;
+      return { cardWidth, gap, isMobile };
+    };
+
     const calculateState = () => {
-      const totalTrackWidth = (cards.length * (cardWidth + gap)) - gap + trackPadding;
+      const { cardWidth, gap, isMobile } = getCardDimensions();
       const containerWidth = track.parentElement?.clientWidth || window.innerWidth;
-      const maxScrollPx = Math.max(0, totalTrackWidth - containerWidth);
-      maxIndex = Math.ceil(maxScrollPx / (cardWidth + gap));
+
+      if (isMobile) {
+        // On mobile, each card takes up the full view, so maxIndex = cards.length - 1
+        maxIndex = Math.max(0, cards.length - 1);
+      } else {
+        const trackPadding = 120;
+        const totalTrackWidth = (cards.length * (cardWidth + gap)) - gap + trackPadding;
+        const maxScrollPx = Math.max(0, totalTrackWidth - containerWidth);
+        maxIndex = Math.ceil(maxScrollPx / (cardWidth + gap));
+      }
 
       if (currentIndex > maxIndex) currentIndex = maxIndex;
       updatePosition();
@@ -331,6 +344,7 @@ setTimeout(() => {
     };
 
     const updatePosition = () => {
+      const { cardWidth, gap } = getCardDimensions();
       const offset = currentIndex * (cardWidth + gap);
       track.style.transform = `translateX(-${offset}px)`;
       updateButtonStates();

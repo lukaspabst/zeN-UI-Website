@@ -186,17 +186,7 @@ export const components: ComponentDefinition[] = [
         description: 'Data table component with styled rows.',
         usage: '<zen-table id="tableDemo"></zen-table><script>document.getElementById("tableDemo").columns=[{key:"name",label:"Name"},{key:"role",label:"Role"}];document.getElementById("tableDemo").data=[{name:"Alice",role:"Developer"},{name:"Bob",role:"Designer"}];</script>'
     },
-    {
-        name: 'Skeleton Text',
-        tagName: 'zen-skeleton',
-        category: 'Data Display',
-        description: 'Loading placeholder for text content.',
-        usage: `<div style="display:flex; flex-direction:column; gap:8px;">
-      <zen-skeleton variant="text" width="80%" height="16px"></zen-skeleton>
-      <zen-skeleton variant="text" width="60%" height="16px"></zen-skeleton>
-      <zen-skeleton variant="text" width="70%" height="16px"></zen-skeleton>
-    </div>`
-    },
+
     {
         name: 'Skeleton Shapes',
         tagName: 'zen-skeleton',

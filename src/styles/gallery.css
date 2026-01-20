@@ -131,3 +131,104 @@
     border-color: var(--zen-glass-border);
     transform: none;
 }
+
+/* Mobile responsive - single card view with center alignment */
+@media (max-width: 768px) {
+    .gallery-container {
+        overflow: hidden;
+        padding: 20px 0;
+    }
+
+    .gallery-track {
+        padding: 20px 0;
+        gap: 16px;
+        justify-content: flex-start;
+    }
+
+    .gallery-card {
+        width: calc(100vw - 80px);
+        max-width: 340px;
+        min-width: 280px;
+        flex-shrink: 0;
+        margin: 0 auto;
+    }
+
+    /* Center the track properly */
+    .gallery-track {
+        padding-left: calc((100vw - min(340px, calc(100vw - 80px))) / 2);
+        padding-right: calc((100vw - min(340px, calc(100vw - 80px))) / 2);
+    }
+
+    .gallery-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        padding: 0 8px;
+        z-index: 10;
+    }
+
+    .gallery-btn {
+        width: 36px;
+        height: 36px;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--zen-primary);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-btn:hover {
+        background: var(--zen-primary);
+    }
+
+    .card-content {
+        padding: 24px;
+        min-height: 180px;
+    }
+
+    .card-info {
+        padding: 16px 20px;
+    }
+
+    .card-info h3 {
+        font-size: 1rem;
+    }
+
+    .card-info p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .gallery-card {
+        width: calc(100vw - 60px);
+        max-width: 320px;
+        min-width: 260px;
+    }
+
+    .gallery-track {
+        padding-left: calc((100vw - min(320px, calc(100vw - 60px))) / 2);
+        padding-right: calc((100vw - min(320px, calc(100vw - 60px))) / 2);
+    }
+
+    .gallery-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .gallery-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .card-content {
+        padding: 20px;
+        min-height: 160px;
+    }
+
+    .card-info {
+        padding: 14px 16px;
+    }
+}
